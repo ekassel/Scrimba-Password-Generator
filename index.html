@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-info">
+        <h1>Generate a <span class="highlight">random password</span></h1>
+        <p class="subhead">Never use an insecure password again.</p>
+        <div class="settings">
+          <div class="setting length-slider-container">
+            <label for="digits">length</label>
+            <input
+              type="range"
+              id="length-output"
+              min="5"
+              max="15"
+              value="10"
+              oninput="this.nextElementSibling.value = this.value"
+            />
+            <output>10</output>
+          </div>
+          <div class="setting">
+            <p class="label">numbers</p>
+            <label class="switch">
+              <input type="checkbox" id="numbers-checkbox" checked />
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <div class="setting">
+            <p class="label">symbols</p>
+            <label class="switch">
+              <input type="checkbox" id="symbols-checkbox" checked />
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+        <button id="generate-btn">Generate passwords</button>
+      </div>
+      <div class="passwords-container">
+        <div class="password-area">
+          <p id="pw1" class="password disabled">&#8203;</p>
+        </div>
+        <div class="password-area">
+          <p id="pw2" class="password disabled">&#8203;</p>
+        </div>
+      </div>
+      <div class="hint-area">
+        <p id="hint">&#8203;</p>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
