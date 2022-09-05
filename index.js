@@ -69,7 +69,6 @@ function generatePassword() {
         password = generatePassword();
     }
 
-    hintEl.textContent = "↑ click a password to copy ↑ ";
     return password;
 }
 
